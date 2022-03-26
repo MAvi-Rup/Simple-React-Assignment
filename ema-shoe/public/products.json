@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "name": "Nike Black Sport Shoe",
+    "price": 1420,
+    "img": "img/black-shoe.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Nike White Sport Shoe",
+    "price": 2170,
+    "img": "img/Black-white shoe.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Yellow Party Shoe",
+    "price": 2720,
+    "img": "img/black-yellow-shoe.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Blue Black Sneaker",
+    "price": 3720,
+    "img": "img/blue black shoe.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Nike Classic Sneakers",
+    "price": 2000,
+    "img": "img/blue sneakers.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Nike High Hill Shoe",
+    "price": 3020,
+    "img": "img/Bluehill.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Classic Brown Lofer",
+    "price": 1720,
+    "img": "img/Brown Shoes.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Classic White Sneaker",
+    "price": 2720,
+    "img": "img/off white shoe.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Nike Red",
+    "price": 3080,
+    "img": "img/red-shoe.jpg"
+  },
+  {
+    "id": "10",
+    "name": "Yellow Sneaker",
+    "price": 3099,
+    "img": "img/white yellow-hill shoe.jpg"
+  },
+  {
+    "id": "11",
+    "name": "Classic White Mix Sneaker",
+    "price": 3420,
+    "img": "img/White-black-shoes.jpg"
+  },
+  {
+    "id": "12",
+    "name": "Red Wine Shoe",
+    "price": 1420,
+    "img": "img/white-red-shoe.jpg"
+  }
+]
