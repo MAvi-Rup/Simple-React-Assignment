@@ -4,19 +4,29 @@ import Product from '../Product/Product';
 import './Shop.css'
 const Shop = () => {
     const [shoes, setShoe] = useState([])
-    let [cart,setCart]= useState([])
+    let [cart, setCart] = useState([])
     useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
             .then(data => setShoe(data))
-    }, [])
-    const updateCart =(product)=>{
-        const newCart = [...cart,product]
+    }, [cart])
+    // useEffect((clearCart)=>{cart=[]},[cart])
+
+    const updateCart = (product) => {
+        const productExist = cart.find((item) => item.id === product.id)
+        if (!productExist) {
+            const newCart = [...cart, product]
+            setCart(newCart)
+        }
+    }
+    const removeCart=()=>{
+        cart=[]
+        const newCart = [...cart]
         setCart(newCart)
     }
-    const clearCart = ()=>{
-        cart =[]
-    }
+    // const clearCart = () => {
+    //     cart = []
+    // }
     return (
         <div className='container'>
             <div className="row">
@@ -29,14 +39,17 @@ const Shop = () => {
                     </div>
                 </div>
                 <div className="col-md-3">
-                <h3 className='text-center'>Added Items</h3>
-                    {
-                        cart.map(product=><Cart key={product.id} product={product}></Cart>)
-                    }
-                
-                <button className='btn btn-primary m-2'>Select 1 For Me</button>
-                <button onClick={clearCart} className='btn btn-primary m-2'>Clear Cart</button>
-                
+                    <h3 className='text-center'>Added Items</h3>
+                    <div className='cart'>
+                        {
+                            // cart.map(product => <Cart key={product.id} product={product}></Cart>)
+                            <Cart cart={cart}></Cart>
+
+                        }
+                    </div>
+                    <button className='btn btn-primary m-2'>Select 1 For Me</button>
+                    <button onClick={removeCart} className='btn btn-primary m-2'>Clear Cart</button>
+
 
                 </div>
             </div>
