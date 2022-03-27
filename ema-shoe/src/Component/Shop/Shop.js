@@ -25,9 +25,13 @@ const Shop = () => {
         setCart(newCart)
     }
     const findCart =()=>{
-        const randomElement = [cart[Math.floor(Math.random() * cart.length)]];
-        const newCart =[...randomElement]
-        setCart(newCart)
+        if(cart != []){
+            const randomElement = [cart[Math.floor(Math.random() * cart.length)]];
+            const newCart =[...randomElement]
+            setCart(newCart)
+
+        }
+       
     }
     return (
         <div className='container'>
