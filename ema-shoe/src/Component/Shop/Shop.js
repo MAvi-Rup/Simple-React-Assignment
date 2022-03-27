@@ -24,9 +24,11 @@ const Shop = () => {
         const newCart = [...cart]
         setCart(newCart)
     }
-    // const clearCart = () => {
-    //     cart = []
-    // }
+    const findCart =()=>{
+        const randomElement = [cart[Math.floor(Math.random() * cart.length)]];
+        const newCart =[...randomElement]
+        setCart(newCart)
+    }
     return (
         <div className='container'>
             <div className="row">
@@ -47,7 +49,7 @@ const Shop = () => {
 
                         }
                     </div>
-                    <button className='btn btn-primary m-2'>Select 1 For Me</button>
+                    <button onClick={findCart} className='btn btn-primary m-2'>Select 1 For Me</button>
                     <button onClick={removeCart} className='btn btn-primary m-2'>Clear Cart</button>
 
 
